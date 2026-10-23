@@ -543,6 +543,11 @@ section { padding-block: clamp(var(--space-16), 10vw, var(--space-24)); }
   border: 1px solid oklch(from #f59e0b l c h / .3);
   color: #f59e0b;
 }
+.badge-released {
+  background: oklch(from #22c55e l c h / .15);
+  border: 1px solid oklch(from #22c55e l c h / .3);
+  color: #22c55e;
+}
 .badge-concept {
   background: oklch(from var(--color-primary) l c h / .12);
   border: 1px solid oklch(from var(--color-primary) l c h / .3);
@@ -1005,7 +1010,7 @@ footer {
       <div class="project-card reveal reveal-delay-1">
         <div class="project-body">
           <div class="project-meta">
-            <span class="project-badge badge-wip">Alpha</span>
+            <span class="project-badge badge-released">Released</span>
           </div>
           <h3 class="project-title">ChipOS</h3>
           <p class="project-desc">
@@ -1059,7 +1064,7 @@ footer {
       <div class="project-card reveal">
         <div class="project-body">
           <div class="project-meta">
-            <span class="project-badge badge-wip">Work in Progress</span>
+            <span class="project-badge badge-released">Released</span>
           </div>
           <h3 class="project-title">CheapTrip</h3>
           <p class="project-desc">
