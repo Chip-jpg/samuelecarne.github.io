@@ -1,65 +1,54 @@
-# 🌐 samuelecarne.me — Personal Portfolio
+# samuelecarne.me
 
-> Live at **[samuelecarne.me](https://samuelecarne.me)**
+Personal portfolio website of Samuele Carne, live at [samuelecarne.me](https://samuelecarne.me).
 
-A personal portfolio website built with plain HTML, CSS, and JavaScript — deployed on GitHub Pages with a custom domain. Designed to be professional, fast, and fully responsive.
+A single-page static site written in plain HTML, CSS and JavaScript, with no build step and no dependencies beyond two Google Fonts. It is hosted on GitHub Pages under a custom domain.
 
----
+## Sections
 
-## ✨ Features
+- **Hero and About:** short introduction and key facts.
+- **Skills:** skills grouped by how well I know them, with an English certifications modal (Cambridge B1, Oxford B2).
+- **Learning:** what I am currently studying.
+- **Projects:** personal projects with a status badge (Released, Work in Progress) and a link to the source.
+- **Contact:** links to GitHub and other profiles.
 
-- Animated hero section with scroll-triggered reveals throughout
-- **Skills & CV** section with honest skill categorisation
-- **Currently Studying** section with active learning cards
-- **Projects** showcase with status badges
-- English certifications modal (Cambridge B1, Oxford B2)
-- Fully responsive — mobile and desktop
-- Dark theme with gold accent
-- SSL secured via Let's Encrypt (HTTPS enforced)
+## Design
 
----
+- Dark theme with a gold accent.
+- Instrument Serif for headings and DM Sans for body text, loaded from Google Fonts.
+- Scroll-triggered reveal animations.
+- Responsive layout for mobile and desktop.
 
-## 🛠 Built With
+## Run locally
 
-| Technology | Purpose |
-|---|---|
-| HTML / CSS / JS | Core structure, styling, and interactivity |
-| GitHub Pages | Free static hosting |
-| Namecheap | Custom domain (`samuelecarne.me`) |
-| GitHub Copilot | AI-assisted development |
-| WSL2 (Ubuntu) | Development environment on Windows |
+No tooling is required. Clone the repository and open `index.html` in a browser:
 
----
-
-## 🚀 Running Locally
-
-No build tools required — just open the file:
-
-```bash
+```
 git clone https://github.com/Chip-jpg/samuelecarne.github.io.git
 cd samuelecarne.github.io
-# Open index.html in your browser
-start index.html        # Windows
 xdg-open index.html     # Linux
+open index.html         # macOS
+start index.html        # Windows
 ```
 
----
-
-## 📁 Structure
+## Project layout
 
 ```
-samuelecarne.github.io/
-└── index.html      # Single-file portfolio
+index.html        The whole site: markup, styles and scripts
+certificates/     PDF certificates linked from the site
+CNAME             Custom domain for GitHub Pages
 ```
 
----
+## Deployment
 
-## 📬 Contact
+The site is served by GitHub Pages from the `main` branch. Pushing to `main` publishes the change. The custom domain is set by the `CNAME` file and a DNS record at the registrar, and HTTPS is enforced through GitHub Pages.
+
+## Updating the projects section
+
+Each project is a `project-card` block inside the `#projects` section of `index.html`. To add one, copy an existing card and change the badge, title, description, tags and link. The badge classes are `badge-released`, `badge-wip` and `badge-concept`.
+
+## Contact
 
 - GitHub: [github.com/Chip-jpg](https://github.com/Chip-jpg)
-- Google Dev: [g.dev/samuelecarne](https://g.dev/samuelecarne)
+- Google Developer profile: [g.dev/samuelecarne](https://g.dev/samuelecarne)
 - Website: [samuelecarne.me](https://samuelecarne.me)
-
----
-
-© 2026 Samuele Carne
