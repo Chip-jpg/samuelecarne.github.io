@@ -553,6 +553,21 @@ section { padding-block: clamp(var(--space-16), 10vw, var(--space-24)); }
   border: 1px solid oklch(from var(--color-primary) l c h / .3);
   color: var(--color-primary);
 }
+.badge-alpha {
+  background: oklch(from #f59e0b l c h / .15);
+  border: 1px solid oklch(from #f59e0b l c h / .3);
+  color: #f59e0b;
+}
+.badge-beta {
+  background: oklch(from var(--color-primary) l c h / .12);
+  border: 1px solid oklch(from var(--color-primary) l c h / .3);
+  color: var(--color-primary);
+}
+.badge-rc {
+  background: oklch(from #22c55e l c h / .15);
+  border: 1px solid oklch(from #22c55e l c h / .3);
+  color: #22c55e;
+}
 .project-title {
   font-family: var(--font-display);
   font-size: var(--text-xl);
@@ -1003,33 +1018,73 @@ footer {
     <div class="reveal">
       <p class="section-label">Projects</p>
       <h2 class="section-title">What I'm building</h2>
-      <p class="section-sub">Personal projects exploring automation, AI, and practical software tools, from desktop apps to Fire TV.</p>
+      <p class="section-sub">Personal projects exploring automation, AI, and practical software tools, from desktop apps and an educational lab to Fire TV.</p>
     </div>
     <div class="projects-grid">
 
-      <div class="project-card reveal reveal-delay-1">
+      <div class="project-card reveal">
         <div class="project-body">
           <div class="project-meta">
             <span class="project-badge badge-released">Released</span>
           </div>
+          <h3 class="project-title">KERS Lab</h3>
+          <p class="project-desc">
+            An educational, offline-first lab with an Italian interface (v0.7.4).
+            It goes from electromagnetic induction to the Formula 1 MGU-K, with theory
+            pages and interactive 3D simulators of braking energy recovery. Also built
+            as a Windows desktop app with Tauri 2, and published on GitHub Pages.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">Three.js</span>
+            <span class="project-tag">Tauri 2</span>
+            <span class="project-tag">KaTeX</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="https://chip-jpg.github.io/MGUK-KERS-Simulator/" target="_blank" rel="noopener noreferrer" class="project-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5h5v5M19 5l-9 9"/><path d="M10 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-4"/></svg>
+            Live
+          </a>
+          <a href="https://github.com/Chip-jpg/MGUK-KERS-Simulator" target="_blank" rel="noopener noreferrer" class="project-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://github.com/Chip-jpg/MGUK-KERS-Simulator/releases/tag/v0.7.4" target="_blank" rel="noopener noreferrer" class="project-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12m0 0l-4-4m4 4l4-4M5 20h14"/></svg>
+            Release
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-badge badge-alpha">Alpha</span>
+          </div>
           <h3 class="project-title">ChipOS</h3>
           <p class="project-desc">
-            A fast, minimal, tvOS-inspired home screen launcher for Amazon Fire TV sticks,
-            built to replace the slow, promotion-heavy stock launcher. Features an app dock,
-            music player, weather, ambient clock, custom wallpapers, and a settings screen.
-            Open source, with no ads and no analytics.
+            A fast, minimal, tvOS-inspired home screen launcher for Amazon Fire TV sticks
+            (alpha, v0.1.0), built to replace the slow, promotion-heavy stock launcher.
+            It has an app dock, music player, weather, an ambient clock, custom wallpapers,
+            and a settings screen. Open source, with no ads and no analytics. Android TV
+            support is in progress.
           </p>
           <div class="project-tags">
             <span class="project-tag">Kotlin</span>
             <span class="project-tag">Jetpack Compose</span>
-            <span class="project-tag">Android / Fire OS</span>
+            <span class="project-tag">Fire OS</span>
             <span class="project-tag">Open Source</span>
           </div>
         </div>
         <div class="project-links">
           <a href="https://github.com/Chip-jpg/ChipOS" target="_blank" rel="noopener noreferrer" class="project-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             GitHub
+          </a>
+          <a href="https://github.com/Chip-jpg/ChipOS/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer" class="project-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12m0 0l-4-4m4 4l4-4M5 20h14"/></svg>
+            Release
           </a>
         </div>
       </div>
@@ -1037,13 +1092,15 @@ footer {
       <div class="project-card reveal">
         <div class="project-body">
           <div class="project-meta">
-            <span class="project-badge badge-wip">Work in Progress</span>
+            <span class="project-badge badge-beta">Beta</span>
           </div>
           <h3 class="project-title">Synapse</h3>
           <p class="project-desc">
-            A local-first desktop flashcard app with FSRS spaced repetition.
-            Built with Tauri 2, Rust, SQLite, and React, with decks, study sessions,
-            notes, and data export/import designed to work offline.
+            A local-first desktop flashcard app with FSRS spaced repetition, in beta
+            at v0.10.0. Built with Tauri 2, Rust, SQLite, and React. Decks, study
+            sessions, notes, cloze and picture cards, tags, CSV and Anki import,
+            built-in text recognition, and optional suggestions and quizzes from a
+            local Ollama model, designed to work offline.
           </p>
           <div class="project-tags">
             <span class="project-tag">Tauri 2</span>
@@ -1055,8 +1112,12 @@ footer {
         </div>
         <div class="project-links">
           <a href="https://github.com/Chip-jpg/synapse-flashcards" target="_blank" rel="noopener noreferrer" class="project-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             GitHub
+          </a>
+          <a href="https://github.com/Chip-jpg/synapse-flashcards/releases/tag/v0.10.0" target="_blank" rel="noopener noreferrer" class="project-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12m0 0l-4-4m4 4l4-4M5 20h14"/></svg>
+            Release
           </a>
         </div>
       </div>
@@ -1064,13 +1125,14 @@ footer {
       <div class="project-card reveal">
         <div class="project-body">
           <div class="project-meta">
-            <span class="project-badge badge-released">Released</span>
+            <span class="project-badge badge-rc">Release candidate</span>
           </div>
           <h3 class="project-title">CheapTrip</h3>
           <p class="project-desc">
-            A local-first travel deal radar that monitors flight and hotel prices,
-            detects unusually cheap fares, assembles itineraries, and sends alerts.
-            Built with Python, SQLite, React, and WebView2.
+            A Windows travel-deal radar at v0.8.7, the release candidate for 1.0.
+            It searches flights from your home airports, compares each fare with what
+            that route usually costs, prices a hotel for the stay, and sends a desktop
+            or Telegram alert. Built with Python, SQLite, React, and WebView2.
           </p>
           <div class="project-tags">
             <span class="project-tag">Python</span>
@@ -1084,6 +1146,10 @@ footer {
           <a href="https://github.com/Chip-jpg/CheapTrip" target="_blank" rel="noopener noreferrer" class="project-link">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             GitHub
+          </a>
+          <a href="https://github.com/Chip-jpg/CheapTrip/releases/tag/v0.8.7" target="_blank" rel="noopener noreferrer" class="project-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12m0 0l-4-4m4 4l4-4M5 20h14"/></svg>
+            Release
           </a>
         </div>
       </div>
