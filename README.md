@@ -9,7 +9,7 @@ A single-page static site written in plain HTML, CSS and JavaScript, with no bui
 - **Hero and About:** short introduction and key facts.
 - **Skills:** skills grouped by how well I know them, with an English certifications modal (Cambridge B1, Oxford B2).
 - **Learning:** what I am currently studying.
-- **Projects:** personal projects with a status badge (Released, Work in Progress) and a link to the source.
+- **Projects:** personal projects with a status badge (Released, Beta, Alpha, Release candidate, Work in Progress) and links to the source, plus a release or live demo when one exists.
 - **Contact:** links to GitHub and other profiles.
 
 ## Design
@@ -45,7 +45,7 @@ The site is served by GitHub Pages from the `main` branch. Pushing to `main` pub
 
 ## Updating the projects section
 
-Each project is a `project-card` block inside the `#projects` section of `index.html`. To add one, copy an existing card and change the badge, title, description, tags and link. The badge classes are `badge-released`, `badge-wip` and `badge-concept`.
+Each project is a `project-card` block inside the `#projects` section of `index.html`. To add one, copy an existing card and change the badge, title, description, tags and links. The badge classes are `badge-released`, `badge-beta`, `badge-alpha`, `badge-rc`, `badge-wip` and `badge-concept`.
 
 ## Contact
 
